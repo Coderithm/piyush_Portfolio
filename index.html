@@ -314,16 +314,20 @@
       .hero-deck { padding-left: 15px; border-left-width: 3px; }
       .hero-aside { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1fr); gap: 15px; align-items: end; }
       .portrait { height: 250px; }
+      .portrait img { top: 0; object-position: center bottom; }
       .aside-copy { font-size: 14px; }
       .stat { padding: 15px 10px; }
-      .stats { grid-template-columns: 1fr; }
-      .stat, .stat:first-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--rule); }
-      .stat:last-child { border-bottom: 0; }
-      .stat b { margin-bottom: 6px; font-size: clamp(20px, 5vw, 30px); }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat, .stat:first-child { min-width: 0; padding: 15px 12px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat-song { grid-column: 1 / -1; padding: 15px 0 4px; border-right: 0; border-bottom: 0; }
+      .stat-image { display: none; }
+      .stat b { margin-bottom: 6px; white-space: normal; font-size: clamp(18px, 4.8vw, 24px); }
       .stat span { display: block; }
       .stat span { font-size: 8px; }
-      .section { padding: 45px 0 40px; }
-      .section-top { align-items: start; }
+      .section { padding: 58px 0 50px; border-bottom: 1px solid var(--rule); }
+      .section + .section { margin-top: 22px; }
+      .section-top { align-items: start; margin-bottom: 32px; padding-bottom: 16px; }
       .section-top .edition { max-width: 118px; font-size: 8px; }
       .lead-project { grid-template-columns: 1fr; }
       .project-plate { min-height: 270px; }
@@ -353,8 +357,10 @@
       .front-label { font-size: 8px; }
       .hero-aside { grid-template-columns: 1fr; }
       .portrait { height: 340px; }
-      .stats { grid-template-columns: 1fr; }
-      .stat, .stat:first-child { padding: 12px 0; border-right: 0; border-bottom: 1px solid var(--rule); }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat, .stat:first-child { padding: 12px 10px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat-song { padding: 12px 0 4px; border-right: 0; border-bottom: 0; }
       .stat:last-child { border-bottom: 0; }
       .stat b { display: block; margin: 0 0 6px; font-size: clamp(18px, 5.5vw, 24px); }
       .stat span { display: block; }
